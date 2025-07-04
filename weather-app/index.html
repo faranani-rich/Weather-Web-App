@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <header>
+        <h1>City Weather Lookup</h1>
+      </header>
+
+      <section class="controls">
+        <label for="cityInput">Enter city name:</label>
+        <input
+          id="cityInput"
+          type="text"
+          placeholder="e.g. Cape Town"
+          aria-label="City name"
+        />
+
+        <button id="submitButton">Get Weather</button>
+
+        <label for="tempUnit">Display in:</label>
+        <select id="tempUnit" aria-label="Temperature unit">
+          <option value="c">Celsius (°C)</option>
+          <option value="f">Fahrenheit (°F)</option>
+          <option value="k">Kelvin (K)</option>
+        </select>
+      </section>
+
+      <div class="card" id="weatherCard" aria-live="polite">
+        <!-- Loading spinner -->
+        <div id="loader" class="spinner" hidden></div>
+
+        <!-- Weather info -->
+        <h2 id="cityDisplay" hidden></h2>
+        <p id="tempDisplay" hidden></p>
+        <p id="humidityDisplay" hidden></p>
+        <p id="descriptionDisplay" hidden></p>
+        <p id="errorDisplay" class="error" hidden></p>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
